@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mel's App Showcase — What's Possible</title>
+<style>
+  :root{
+    --bg:#0f1226; --card:#1a1f3c; --card2:#222a52;
+    --ink:#eef1ff; --muted:#a9b1da; --line:#2c3460;
+    --pink:#ff6ec7; --blue:#6ea8ff; --green:#4be3a5; --gold:#ffd166; --purple:#b693ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 600px at 20% -10%,#241a4d 0%,transparent 60%),
+               radial-gradient(1000px 500px at 100% 0%,#1a3350 0%,transparent 55%),
+               var(--bg);
+    color:var(--ink);min-height:100vh;line-height:1.5;
+    padding:48px 20px 80px;
+  }
+  .wrap{max-width:980px;margin:0 auto}
+  header{text-align:center;margin-bottom:14px}
+  .badge{
+    display:inline-block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  }
+  h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin-bottom:12px}
+  h1 .grad{
+    background:linear-gradient(90deg,var(--pink),var(--purple),var(--blue));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .sub{color:var(--muted);font-size:17px;max-width:640px;margin:0 auto 40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border:1px solid var(--line);border-radius:18px;padding:24px;
+    display:flex;flex-direction:column;gap:12px;
+    transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--accent,#3a4480);box-shadow:0 14px 40px rgba(0,0,0,.35)}
+  .icon{font-size:34px;line-height:1}
+  .card h2{font-size:20px}
+  .card p{color:var(--muted);font-size:15px;flex:1}
+  .tag{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .btn{
+    text-decoration:none;font-weight:600;font-size:14px;padding:9px 16px;border-radius:11px;
+    display:inline-flex;align-items:center;gap:6px;transition:opacity .15s ease,transform .1s ease;
+  }
+  .btn:hover{opacity:.88;transform:translateY(-1px)}
+  .btn.open{background:var(--accent);color:#0c0f22}
+  .btn.code{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .c-finance{--accent:var(--green)}
+  .c-book{--accent:var(--gold)}
+  .c-health{--accent:var(--pink)}
+  .c-mis{--accent:var(--blue)}
+  .c-mis2{--accent:var(--purple)}
+  footer{text-align:center;color:var(--muted);font-size:14px;margin-top:54px;line-height:1.7}
+  footer a{color:var(--blue);text-decoration:none}
+  .note{margin-top:8px;font-size:13px;opacity:.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="badge">Built with HTML · CSS · JavaScript</span>
+    <h1>Mel's App Showcase<br><span class="grad">What's Possible</span></h1>
+    <p class="sub">A collection of working web apps — each one a single file you can open in any browser.
+    No accounts, no downloads. Click <strong>Open App</strong> to try one, or <strong>View Code</strong> to see how it's built.</p>
+  </header>
+
+  <div class="grid">
+
+    <div class="card c-finance">
+      <div class="icon">💰</div>
+      <span class="tag">Finance</span>
+      <h2>moneyCents</h2>
+      <p>A budgeting &amp; money-tracking app to plan spending and watch where your dollars go — all saved right in your browser.</p>
+      <div class="links">
+        <a class="btn open" href="https://melalwayslearning.github.io/moneyCents/" target="_blank" rel="noopener">Open App →</a>
+        <a class="btn code" href="https://github.com/MelAlwaysLearning/moneyCents" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+
+    <div class="card c-book">
+      <div class="icon">🔖</div>
+      <span class="tag">Productivity</span>
+      <h2>My Bookmarks</h2>
+      <p>A simple bookmark manager to save, organize, and quickly reach your favorite links. Your bookmarks stay on your device.</p>
+      <div class="links">
+        <a class="btn open" href="https://melalwayslearning.github.io/my-bookmarks-app/" target="_blank" rel="noopener">Open App →</a>
+        <a class="btn code" href="https://github.com/MelAlwaysLearning/my-bookmarks-app" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+
+    <div class="card c-health">
+      <div class="icon">🏋️</div>
+      <span class="tag">Health &amp; Fitness</span>
+      <h2>MelsHealthTracker</h2>
+      <p>A personal training dashboard — track meals &amp; macros, log daily check-ins, set goals, and watch your progress over time.</p>
+      <div class="links">
+        <a class="btn open" href="https://melalwayslearning.github.io/training-dashboard/" target="_blank" rel="noopener">Open App →</a>
+        <a class="btn code" href="https://github.com/MelAlwaysLearning/training-dashboard" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+
+    <div class="card c-mis">
+      <div class="icon">📘</div>
+      <span class="tag">Course · Active</span>
+      <h2>MIS — 10th Edition</h2>
+      <p>The full course companion: 14 chapters of interactive slides, printables, and a Jeopardy review game. This is the live class app.</p>
+      <div class="links">
+        <a class="btn open" href="https://melalwayslearning.github.io/MIS-10th-Edition/" target="_blank" rel="noopener">Open App →</a>
+        <a class="btn code" href="https://github.com/MelAlwaysLearning/MIS-10th-Edition" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+
+    <div class="card c-mis2">
+      <div class="icon">📗</div>
+      <span class="tag">Course · Upcoming</span>
+      <h2>MIS — 11th Edition</h2>
+      <p>The next edition of the course app, same interactive format — slides, printables, and review games for the chapters ahead.</p>
+      <div class="links">
+        <a class="btn open" href="https://melalwayslearning.github.io/MIS-11th-Edition/" target="_blank" rel="noopener">Open App →</a>
+        <a class="btn code" href="https://github.com/MelAlwaysLearning/MIS-11th-Edition" target="_blank" rel="noopener">View Code</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Made by <strong>Mel</strong> — always learning. 💜<br>
+    Every app here is one HTML file. If she can build it, so can you.
+    <div class="note">All apps store your data privately in your own browser — nothing is uploaded.</div>
+  </footer>
+</div>
+</body>
+</html>
